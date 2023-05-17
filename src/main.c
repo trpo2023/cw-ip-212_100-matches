@@ -17,22 +17,22 @@ int main()
  while (1) {
  int count = 100;
  while (count > 0) {
- printf("Осталось спичек: %d\n", count);
- printf("Сколько спичек хотите взять? ");
+ printf("РћСЃС‚Р°Р»РѕСЃСЊ СЃРїРёС‡РµРє: %d\n", count);
+ printf("РЎРєРѕР»СЊРєРѕ СЃРїРёС‡РµРє С…РѕС‚РёС‚Рµ РІР·СЏС‚СЊ? ");
  fgets(buf, 32, stdin);
  if (sscanf(buf, "%d", &inputNum) != 1) {
- printf("Неправильный ввод\n");
+ printf("РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ\n");
  continue;
  }
  if (check_inputNum(inputNum) == 0) {
- printf("введите число от одного до десяти\n");
+ printf("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РѕС‚ РѕРґРЅРѕРіРѕ РґРѕ РґРµСЃСЏС‚Рё\n");
  continue;
  }
  if (check_inputNum2(inputNum, &count) == 0) {
- printf("Введите допустимое значение\n");
+ printf("Р’РІРµРґРёС‚Рµ РґРѕРїСѓСЃС‚РёРјРѕРµ Р·РЅР°С‡РµРЅРёРµ\n");
  continue;
  }
- printf("Осталось спичек: %d\n", count);
+ printf("РћСЃС‚Р°Р»РѕСЃСЊ СЃРїРёС‡РµРє: %d\n", count);
  key = 2;
  if (count > 0) {
  compNum = rand() % 10 + 1;
@@ -49,17 +49,17 @@ int main()
  }
  count -= compNum;
  }
- printf("Компьютер взял: %d\n", compNum);
+ printf("РљРѕРјРїСЊСЋС‚РµСЂ РІР·СЏР»: %d\n", compNum);
  key = 1;
  }
  }
  if (key == 1) {
- printf("  Вы выиграли!!!\n");
+ printf("Р’С‹ РІС‹РёРіСЂР°Р»Рё !!!!\n");
  } 
  else {
- printf("  Вы проиграли :(\n");
+ printf("Р’С‹ РїСЂРѕРёРіСЂР°Р»Рё :(\n");
  }
- printf("Уходите?(n) Продолжаем?(y)\n");
+ printf("РЈС…РѕРґРёС‚Рµ?(n) РџСЂРѕРґРѕР»Р¶Р°РµРј?(y)\n");
  scanf("%c%*c", &choice);
  if (choice == 'n' || choice == 'N')
  exit(0);
